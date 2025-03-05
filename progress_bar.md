@@ -9,10 +9,19 @@
 (StableDiffusion)
 (https://openaccess.thecvf.com/content/CVPR2023/papers/Xie_SmartBrush_Text_and_Shape_Guided_Object_Inpainting_With_Diffusion_Model_CVPR_2023_paper.pdf)
 - RePaint 
-(StableDiffusion)
+(StableDiffusion) 
 (https://arxiv.org/pdf/2201.09865)
+- wasserstein gan gp pytorch
+- CoModGAN
+- Clip-Guided Inpainting
+- Deep Image Blending
+- V-LASIK’s Diffusion-Based Blending
+- Saturation Loss + 2-stage PAN Method
+- HoloUNet
 
 ## In progress:
+- Poisson blending (working version)
+- Alpha blending
 
 ## Implemented:
 - Stable Diffusion Impainting
