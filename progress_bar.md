@@ -11,17 +11,26 @@
 - RePaint 
 (StableDiffusion) 
 (https://arxiv.org/pdf/2201.09865)
-- wasserstein gan gp pytorch
+- Wasserstein Gan GP 
+(in Pytorch)
 - CoModGAN
 - Clip-Guided Inpainting
 - Deep Image Blending
 - V-LASIK’s Diffusion-Based Blending
 - Saturation Loss + 2-stage PAN Method
 - HoloUNet
+- Multi-stage Blendd Diffusion 
+(https://replicate.com/arielreplicate/multi-stage-blended-diffusion)
+- IP adapter
+(plugged into Stable Diffusion to influence the result)
+(https://huggingface.co/docs/diffusers/main/using-diffusers/ip_adapter)
+- ControlNet
+(plugged in Stable Diffusion to influence the result)
+- solutions for Image Harmonization
 
 ## In progress:
-- Poisson blending (working version)
-- Alpha blending
+- Poisson blending (working version) 
+- Alpha blending (valid version) 
 
 ## Implemented:
 - Stable Diffusion Impainting
@@ -32,6 +41,6 @@
 ## Didn't work:
 - GP-GAN 
 (too old dependencies)
-- Stable Diffusion General 
+- Stable Diffusion General Model 
 (doesn't work)
 - 
