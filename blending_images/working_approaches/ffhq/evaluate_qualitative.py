@@ -22,9 +22,13 @@ loss_fn_vgg = lpips.LPIPS(net='vgg', verbose=False)
 #model = SAM("blending_images/working_approaches/ffhq/sam2_l.pt") 
 
 sam_clip_models = initialize_sam_clip(
-    sam_checkpoint="sam_vit_l_0b3195.pth", 
+    sam_checkpoint="sam_vit_l_0b3195.pth",  
     sam_model_type="vit_l"
 )
+
+# curl https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth -o sam_vit_l_0b3195.pth
+
+# wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 
 # ==========================================
 # 1. LPIPS Calculation (Single Image Pair)
@@ -172,14 +176,14 @@ def calculate_sam_clip_metrics(harmonized_img_path, ground_truth_mask_path):
 #print(f"LPIPS Score: {lpips_score:.4f} (Lower is better)")
 
 # 2. Run SAM 2 to see if the harmonization tricks the segmentation model
-iou, mse, dice, sam_mask = calculate_sam_clip_metrics("temp_eval/naive_0x0.png", "../../frames_new/masks/110020220079_01.png")
-print(f"SAM 2 IoU:        {iou:.4f} (Higher is better)")
-print(f"SAM 2 MSE Loss:   {mse:.4f} (Lower is better)")
-print(f"SAM 2 Dice Loss:  {dice:.4f} (Lower is better)")
+# iou, mse, dice, sam_mask = calculate_sam_clip_metrics("temp_eval/naive_0x0.png", "../../frames_new/masks/110020220079_01.png")
+# print(f"SAM 2 IoU:        {iou:.4f} (Higher is better)")
+# print(f"SAM 2 MSE Loss:   {mse:.4f} (Lower is better)")
+# print(f"SAM 2 Dice Loss:  {dice:.4f} (Lower is better)")
 
 
-# Save the mask to visually inspect what SAM 2 saw
-cv2.imwrite("sam2_prediction_mask.png", sam_mask)
+# # Save the mask to visually inspect what SAM 2 saw
+# cv2.imwrite("sam2_prediction_mask.png", sam_mask)
 
 # 3. Run FID (when generated whole folder of images)
 # fid_score = calculate_fid("./dataset/real_faces_with_glasses", "./dataset/diffusion_harmonized_faces")
